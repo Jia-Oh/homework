@@ -1,1 +1,46 @@
-/* 여기에 스타일을 구현해 주세요 */
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+.avatars {
+  position: relative;
+  width: fit-content;
+  width: 416px;
+  height: 208px;
+  top: 50%;
+  left: 50%;
+  margin-left: -208px;
+  margin-top: -104px;
+}
+
+img {
+  border-radius: 50%;
+}
+.avatars li {
+  list-style: none;
+  float: left;
+  position: relative;
+  margin: 20px;
+}
+
+.avatars li:nth-child(5) {
+  clear: left;
+}
+
+.avatars .status {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px white solid;
+  bottom: 0;
+  right: 0;
+}
+
+.off {
+  background: lightgrey;
+}
+.on {
+  background: mediumspringgreen;
+}
