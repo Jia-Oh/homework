@@ -27,7 +27,7 @@ body {
   color: var(--text-color);
 
   > a {
-    align-self: center;
+    margin-inline: auto;
   }
 }
 .input-login {
@@ -58,7 +58,17 @@ body {
     font-size: 0.5rem;
     color: var(--error-color);
     margin: 0;
+    display: none;
   }
+
+  input[type='email']:invalid:not(:placeholder-shown) + p {
+    display: block;
+  }
+
+  input[type='password']:invalid:not(:placeholder-shown) + p {
+    display: block;
+  }
+
   .sr-only {
     position: absolute;
     width: 1px;
