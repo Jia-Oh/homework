@@ -25,6 +25,10 @@ body {
   flex-flow: column nowrap;
   row-gap: 1.5rem;
   color: var(--text-color);
+
+  > a {
+    align-self: center;
+  }
 }
 .input-login {
   display: flex;
