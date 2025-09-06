@@ -1,1 +1,116 @@
 /* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+:root {
+  --red-500: #e50914;
+  --red-600: #b70710;
+  --green-100: #03cc5c;
+  --green-200: #1bf008;
+  --green-300: #03cca8;
+  --gray-100: #bcc3c7;
+  --gray-200: #9b9a90;
+  --gray-300: #6d7478;
+  --text-color: #121212;
+  --focus-color: #24388d;
+  --focus-ol-color: #03cf5d;
+  --focus-bg-color: #e9f0fd;
+  --button-color: var(--green-100);
+  --error-color: var(--red-500);
+}
+
+body {
+  margin: 20px;
+}
+
+.content-box {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 1.5rem;
+  color: var(--text-color);
+}
+.input-login {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 0.5rem;
+
+  input {
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    padding: 0.5rem;
+
+    &:focus {
+      background: var(--focus-bg-color);
+      border: 1px solid var(--focus-ol-color);
+      outline: none;
+    }
+  }
+  button {
+    border: 0;
+    border-radius: 1px;
+    color: white;
+    padding: 0.5rem;
+    background: var(--button-color);
+    cursor: pointer;
+  }
+  p {
+    font-size: 0.5rem;
+    color: var(--error-color);
+    margin: 0;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    pointer-events: none;
+  }
+}
+.login-status {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+  column-gap: 0.5em;
+
+  p {
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+.login-status .security {
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+
+  .content-box {
+    max-width: 500px;
+    width: 100%;
+    margin-top: 4rem;
+    padding: 2rem 1.25rem;
+    border: 1px solid var(--gray-100);
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  .input-login input,
+  .input-login button {
+    font-size: 1rem;
+  }
+
+  .login-status {
+    font-size: 0.9rem;
+  }
+}
